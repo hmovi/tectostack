@@ -66,3 +66,5 @@ h1 i,h2 i{font-style:normal;font-weight:800;color:var(--sun)}
 footer{background:var(--ink)}tr.me td{color:var(--sun)}
 section.alt{background:var(--soft)}
 @media(max-width:900px){.heroimg{padding:0}.heroimg::before{right:-10px;top:-14px}.term.mini{display:none}}
+
+.logo svg{height:38px;width:38px;flex:none;border-radius:9px;box-shadow:0 0 0 1px #1f1f1f22}
