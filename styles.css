@@ -88,3 +88,20 @@ section.alt .card{background:var(--bg);border:1px solid var(--line)}
 .facts div{background:var(--aqua);border-radius:var(--r);padding:22px 26px;color:var(--mut);font-size:15.5px}.facts b{display:block;color:var(--ink);font-size:22px;letter-spacing:-.02em;margin-bottom:2px}
 @media(max-width:900px){.team{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.facts{grid-template-columns:1fr}}
+
+.svx{display:grid;grid-template-columns:340px 1fr;gap:20px;align-items:start}
+.svlist{display:flex;flex-direction:column;gap:6px}
+.svlist button{display:flex;gap:14px;align-items:center;text-align:left;border:1px solid var(--line);background:var(--bg);border-radius:18px;padding:15px 18px;font:500 17px 'Jost',system-ui,sans-serif;color:var(--ink);cursor:pointer;transition:.2s}
+.svlist button span{font-size:13px;color:var(--sun);font-weight:600;min-width:20px}
+.svlist button:hover{border-color:var(--ink)}.svlist button[aria-selected=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}.svlist button[aria-selected=true] span{color:#d9c3ae}
+.svpanel{background:var(--soft);border-radius:28px;padding:40px;min-height:100%}
+.svpanel.in{animation:in .4s both}
+.svpanel h3{font-size:clamp(28px,3vw,40px);letter-spacing:-.035em;line-height:1.05;margin-bottom:12px}.svs{color:var(--mut);font-size:19px;max-width:560px}
+.svc{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;margin:28px 0 8px}
+.svc h4{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--sun);margin-bottom:10px}
+.svc ul{list-style:none;padding:0}.svc li{padding:10px 0 10px 26px;border-top:1px solid var(--line);position:relative}.svc li::before{content:"";position:absolute;left:0;top:19px;width:10px;height:10px;border-radius:50%;background:var(--aqua);box-shadow:0 0 0 2px var(--sun) inset}
+.svm{display:grid;gap:12px;align-content:start}.svm div{background:var(--aqua);border-radius:18px;padding:18px 22px}.svm small{display:block;color:var(--mut);font-size:14px}.svm b{font-size:26px;letter-spacing:-.03em}
+.svpanel .tags{margin:20px 0 26px}
+.pr{display:block;font-size:30px;letter-spacing:-.03em;color:var(--sun);margin:4px 0 10px}
+.pills{display:flex;flex-wrap:wrap;gap:10px}.pills span{background:var(--aqua);border-radius:99px;padding:12px 24px;font-weight:500;font-size:18px}
+@media(max-width:900px){.svx{grid-template-columns:1fr}.svlist{flex-direction:row;overflow-x:auto;padding-bottom:6px}.svlist button{white-space:nowrap}.svc{grid-template-columns:1fr}.svpanel{padding:28px 22px}}
