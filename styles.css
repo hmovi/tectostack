@@ -75,3 +75,5 @@ section.alt{background:var(--soft)}
 @media(max-width:900px){.sol{grid-template-columns:1fr;padding:32px 22px}}
 
 section.alt .card{background:var(--bg);border:1px solid var(--line)}
+
+.pager{display:flex;justify-content:space-between;align-items:center;margin-top:24px;color:var(--mut);font-weight:500}.pb{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--ink);background:none;color:var(--ink);font-size:20px;cursor:pointer;margin-left:8px;transition:.2s}.pb:hover:not(:disabled){background:var(--ink);color:var(--bg)}.pb:disabled{opacity:.28;cursor:default}
