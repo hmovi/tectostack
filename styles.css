@@ -73,3 +73,5 @@ section.alt{background:var(--soft)}
 .sol{background:var(--aqua);border-radius:36px;padding:56px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
 .sol h2 i{color:var(--sun)}.sollogo{background:var(--bg);border-radius:var(--r);padding:36px;display:grid;place-items:center;transition:.25s}.sollogo:hover{transform:translateY(-4px);box-shadow:0 20px 40px -26px var(--ink)}.sollogo img{width:100%;max-width:360px;height:auto;display:block}
 @media(max-width:900px){.sol{grid-template-columns:1fr;padding:32px 22px}}
+
+section.alt .card{background:var(--bg);border:1px solid var(--line)}
