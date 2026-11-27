@@ -241,14 +241,14 @@ footer .fb{flex-direction:column}
 .ab-locs{list-style:none;padding:0;margin:0;display:grid;gap:10px}
 .ab-locs li{display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:18px;background:var(--soft)}
 .ab-locs li i{flex:none;width:12px;height:12px;border-radius:50%;margin-top:7px;background:#5bb58d}
-.ab-locs li:nth-child(2) i{background:var(--sun)}.ab-locs li:nth-child(3) i{background:#30577b}
+.ab-locs li:nth-child(2) i{background:#5bb58d}.ab-locs li:nth-child(3) i{background:#30577b}.ab-locs li:nth-child(4) i{background:var(--sun)}
 .ab-locs li.hub{background:var(--ink);color:#fff}.ab-locs li.hub i{background:#5bb58d;box-shadow:0 0 0 4px #5bb58d44}
 .ab-locs b{display:block;font-size:17px}
 .ab-locs span{display:block;font-size:15px;color:var(--mut)}.ab-locs li.hub span{color:#cfc9c1}
 .ab-map{background:var(--bg);border-radius:28px;box-shadow:inset 0 0 0 1px var(--line);overflow:hidden}
 .ab-map svg{display:block;width:100%;height:auto}
 .ab-map .ab-arc{stroke-dasharray:6 8;animation:ab-dash 14s linear infinite}
-.ab-map .pulse{transform-origin:110px 128px;animation:ab-pulse 2.4s ease-out infinite}
+.ab-map .pulse{transform-box:fill-box;transform-origin:center;animation:ab-pulse 2.4s ease-out infinite}
 @keyframes ab-dash{to{stroke-dashoffset:-280}}
 @keyframes ab-pulse{0%{transform:scale(.6);opacity:.5}100%{transform:scale(1.8);opacity:0}}
 .sollogo img{min-height:60px}
@@ -541,3 +541,5 @@ footer .fsoc a{padding:0}
 .tr-steps li:nth-child(2) b{background:#dcf3f4}.tr-steps li:nth-child(3) b{background:#856b54;color:#fff}
 .tr-steps h3{color:#fff;font-size:19px;margin:2px 0 4px}.tr-steps p{color:#b8b2aa;margin:0;font-size:15px}
 @media(max-width:900px){.tr-card{grid-template-columns:1fr;gap:32px;padding:40px 26px;border-radius:26px}}
+
+.ab-map .ab-lbl text{paint-order:stroke;stroke:#fefdfb;stroke-width:5px;stroke-linejoin:round}
