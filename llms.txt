@@ -1,0 +1,28 @@
+# Tectostack
+
+> Tectostack is a senior-led, 100% AI-forward software development company based in Vancouver, British Columbia, Canada. It has a dedicated sales team in the Middle East and North Africa (MENA) and development teams across North America, Europe and South Asia. It builds web apps, mobile apps, APIs, AI integrations, data systems, video platforms and cloud infrastructure, with a written scope and a fixed quote before work starts.
+
+- Headquarters: Vancouver, Canada. Serves companies in Canada, the Middle East (including the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman, Egypt, Jordan and Morocco) and worldwide.
+- Contact: hello@tectostack.com. Replies within one business day. Free 30-minute consultation.
+- Pricing: fixed quotes in CAD (USD, EUR and others on request). Discovery sprint $2,500; MVP from $12,000; engineer on retainer $7,500/month or $115/hour.
+- Speed: discovery sprint 1 to 2 weeks; AI pilot 2 to 4 weeks; MVP 6 to 10 weeks; weekly demos on a live staging site.
+- Part of the Soliton Power group of companies: https://www.solitonpower.com
+
+## Services
+- [Custom web applications](https://www.tectostack.com/custom-web-applications): Custom web applications, SaaS products and customer portals built by senior engineers in Vancouver, Canada, for companies in the Middle East and worldwide. Starting at $12,000 CAD, typically 6 to 10 weeks.
+- [iOS and Android apps](https://www.tectostack.com/mobile-app-development): iOS and Android apps from one codebase, built by a senior team in Vancouver, Canada. Push notifications, offline mode and app store launch, for MENA and beyond. Starting at $25,000 CAD, typically 10 to 16 weeks.
+- [APIs and backend engineering](https://www.tectostack.com/api-backend-development): Fast, documented APIs and backends in FastAPI and Django: sign-in, payments, queues and integrations. Senior engineers in Vancouver, Canada, serving MENA. Starting at $15,000 CAD, typically 6 to 10 weeks.
+- [AI development and integration](https://www.tectostack.com/ai-development): AI assistants, document Q&A, transcription and private on-site models from a 100% AI-forward team in Vancouver, Canada. Pilots in 2 to 4 weeks, for MENA too. Starting at $9,000 CAD, typically 2 to 4 week pilot.
+- [Data engineering and real-time systems](https://www.tectostack.com/data-engineering): Data pipelines, event streaming, time-series storage and live dashboards, built by senior engineers in Vancouver, Canada, for companies in MENA and worldwide. Starting at $12,000 CAD, typically 6 to 8 weeks.
+- [Video and media platforms](https://www.tectostack.com/video-streaming-platforms): Video and media platforms with HLS and DASH streaming, resumable uploads and FFmpeg transcoding, built by a senior team in Vancouver, Canada, serving MENA. Starting at $30,000 CAD, typically 12 to 14 weeks.
+- [Cloud, DevOps and observability](https://www.tectostack.com/cloud-devops): Docker and Cloud Run deployments, CI/CD and Grafana observability from senior engineers in Vancouver, Canada. Reliable releases for MENA and global teams. Starting at $8,000 CAD, typically about 4 weeks.
+- [QA and test automation](https://www.tectostack.com/qa-test-automation): Automated testing with pytest, Playwright and Vitest, plus static analysis and coverage in your pipeline. Senior QA engineering from Vancouver, Canada. Starting at $5,000 CAD, typically 2 to 3 weeks.
+
+## Key pages
+- [Home](https://www.tectostack.com/): overview, examples and the MENA sales model
+- [Tectostack for the Middle East](https://www.tectostack.com/middle-east): how Middle East and North Africa companies work with a Canadian team
+- [AI Integration](https://www.tectostack.com/ai-integration): how Tectostack uses AI and adds it to client products
+- [Prices](https://www.tectostack.com/prices): packages and an estimator
+- [Why Vancouver](https://www.tectostack.com/vancouver): time zones, trade agreements, talent and Canadian IP law
+- [About](https://www.tectostack.com/about): team and way of working
+- [Contact](https://www.tectostack.com/contact)

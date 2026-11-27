@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/why-vancouver", "destination": "/vancouver", "permanent": true },
+    { "source": "/ai", "destination": "/ai-integration", "permanent": true },
+    { "source": "/mena", "destination": "/middle-east", "permanent": true }
+  ],
+  "headers": [
+    { "source": "/(.*)\\.(jpg|png|svg|ico)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=604800" }] },
+    { "source": "/(.*)", "headers": [{ "key": "X-Content-Type-Options", "value": "nosniff" }, { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }] }
+  ]
+}
