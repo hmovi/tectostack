@@ -54,3 +54,44 @@ const tt=document.getElementById('tt');if(tt){const L=['<span class="c"># new pr
 const ty=document.getElementById('ty');if(ty){const sz=document.getElementById('sz'),ops=document.getElementById('ops'),N=['Small','Medium','Large'],M=[.7,1,1.7],c=x=>'$'+(Math.round(x/500)*500).toLocaleString('en-CA');function e(){const b=ty.value*1000*M[sz.value-1]+(ops.checked?3000:0);rg.textContent=c(b*.9)+' to '+c(b*1.25);szl.textContent=N[sz.value-1];wk.textContent='About '+Math.round(4+sz.value*3+ty.value/5)+' weeks. Your written quote sets the exact price.'}[ty,sz,ops].forEach(x=>x.oninput=e);e()}
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}}),{threshold:.12});document.querySelectorAll('.rv').forEach(x=>io.observe(x));
 const f=document.getElementById('cf');if(f)f.onsubmit=e=>{e.preventDefault();const d=new FormData(f);location.href='mailto:hello@tectostack.com?subject='+encodeURIComponent('Project inquiry: '+d.get('type'))+'&body='+encodeURIComponent(d.get('msg')+'\n\n'+d.get('name')+' ('+d.get('email')+')'+(d.get('company')?'\n'+d.get('company'):''))};
+
+/* ===== Home: We build your world ===== */
+(()=>{const view=document.getElementById('wbview');if(!view)return;
+const scenes=[...view.querySelectorAll('.wb-scene')],tabs=[...document.querySelectorAll('.wb-tabs button')],url=document.getElementById('wburl');
+const URLS=['db.yourcompany.com/schema','app.yourcompany.com','shop.yourcompany.com','github.com/yourcompany/app'];
+const MS=6500,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,wait=ms=>new Promise(r=>setTimeout(r,ms));
+document.querySelector('.wb-tabs').style.setProperty('--wbms',MS+'ms');
+// code scene: ⟦k:…⟧ keyword, ⟦s:…⟧ string, ⟦f:…⟧ function, ⟦c:…⟧ comment, ⟦t:…⟧ type
+const src=`⟦c:# Orders API for your store⟧
+⟦k:from⟧ fastapi ⟦k:import⟧ FastAPI, Depends
+⟦k:from⟧ .db ⟦k:import⟧ session, Order
+
+app = ⟦f:FastAPI⟧(title=⟦s:"Your Store API"⟧)
+
+⟦t:@app.post⟧(⟦s:"/orders"⟧)
+⟦k:async def⟧ ⟦f:create_order⟧(order: Order, db=⟦f:Depends⟧(session)):
+    db.⟦f:add⟧(order)
+    ⟦k:await⟧ db.⟦f:commit⟧()
+    ⟦k:await⟧ ⟦f:notify⟧(order.user_id, ⟦s:"Order confirmed"⟧)
+    ⟦k:return⟧ {⟦s:"id"⟧: order.id, ⟦s:"status"⟧: ⟦s:"paid"⟧}`;
+const toks=[];src.replace(/⟦(\w):([^⟧]*)⟧|([^⟦]+)/g,(m,c,t,p)=>{toks.push(p!==undefined?['',p]:[c,t]);return m});
+const total=toks.reduce((a,t)=>a+t[1].length,0),esc=t=>t.replace(/&/g,'&amp;').replace(/</g,'&lt;'),code=document.getElementById('wbcode'),term=document.getElementById('wbterm');
+const render=n=>{let h='',l=n;for(const[c,t]of toks){if(l<=0)break;const p=t.slice(0,l);l-=p.length;h+=c?`<span class="${c}">${esc(p)}</span>`:esc(p)}code.innerHTML=h+'<span class="cur"></span>'};
+const TL=[['','$ pytest -q'],['ok','✓ 42 passed in 3.1s'],['','$ deploy --production'],['ok','✓ Live on Cloud Run']];
+let token=0,cur=-1,running=false;
+function show(i){cur=i;view.classList.remove('boot');scenes.forEach((s,k)=>{s.classList.toggle('on',k===i);if(k===i){s.style.animation='none';void s.offsetWidth;s.style.animation=''}});
+ // restart CSS animations inside the scene
+ const s=scenes[i];s.classList.remove('on');void s.offsetWidth;s.classList.add('on');
+ tabs.forEach((t,k)=>{t.setAttribute('aria-selected',k===i);t.classList.remove('run')});void tabs[i].offsetWidth;if(!reduce)tabs[i].classList.add('run');url.textContent=URLS[i]}
+async function sceneFx(i,my){
+ if(i===2){const cart=document.getElementById('wbcart'),ps=[...view.querySelectorAll('.sh-p')],toast=view.querySelector('.sh-toast');cart.textContent='0';toast.classList.remove('show');ps.forEach(p=>p.classList.remove('pick'));
+  await wait(1600);for(const k of [0,1]){if(my!==token)return;ps[k].classList.add('pick');cart.textContent=String(k+1);cart.parentElement.classList.remove('bump');void cart.offsetWidth;cart.parentElement.classList.add('bump');await wait(900)}
+  if(my!==token)return;toast.classList.add('show')}
+ if(i===3){term.innerHTML='';for(let n=0;n<=total;n+=4){if(my!==token)return;render(n);await wait(18)}render(total);for(const[c,l]of TL){if(my!==token)return;term.innerHTML+=`<span class="${c}">${l}</span>\n`;await wait(450)}}}
+async function play(start,boot){const my=++token;let i=start;
+ while(my===token){if(boot){view.classList.add('boot');scenes.forEach(s=>s.classList.remove('on'));tabs.forEach(t=>t.classList.remove('run'));url.textContent='tectostack.com/build';await wait(2400);if(my!==token)return}
+  show(i);sceneFx(i,my);await wait(MS);if(my!==token)return;i=(i+1)%scenes.length;boot=i===0}}
+tabs.forEach((t,i)=>t.addEventListener('click',()=>{if(reduce){token++;show(i);sceneFx(i,token);return}running=true;play(i,false)}));
+if(reduce){show(0);render(total);return}
+let vis=false;const upd=()=>{const v=vis&&!document.hidden;if(v&&!running){running=true;play(cur<0?0:cur,cur<0)}else if(!v&&running){running=false;token++}};
+new IntersectionObserver(es=>{vis=es[0].isIntersecting;upd()},{threshold:.25}).observe(view);document.addEventListener('visibilitychange',upd);})();
