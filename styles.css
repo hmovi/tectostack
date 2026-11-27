@@ -524,3 +524,20 @@ footer .fsoc a{padding:0}
 @media(max-width:900px){.wbw-head{grid-template-columns:1fr;gap:12px}.wb-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.wb-bezel{padding:8px 8px 12px;border-radius:16px}.wb-neck{height:32px;width:100px}}
 @media(max-width:600px){.wb-tabs small{display:none}.wb-view{aspect-ratio:4/3.4}.wb-tb{width:20%}.wb-tb span{font-size:.8em;padding:.35em .5em}.wb-tb b{padding:.5em}.wb-tb span:nth-child(n+4){display:none}.wb-rows span{grid-template-columns:7em 1fr 3em}.sh-nav span{display:none}.wf-desk{width:66%}.wf-phone{width:22%}}
 @media(prefers-reduced-motion:reduce){.wb-scene *{animation-duration:.01s!important;animation-delay:0s!important}}
+
+/* ===== First-project offer ===== */
+.trial{padding-top:40px}
+.tr-card{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:56px;align-items:center;padding:64px;border-radius:36px;color:#fff;background:radial-gradient(circle at 0% 0%,#30577b66,transparent 55%),radial-gradient(circle at 100% 100%,#5bb58d40,transparent 50%),#1f1f1f;box-shadow:0 40px 80px -40px rgba(31,31,31,.6)}
+.tr-card .ab-kick{color:#9fe3c3}
+.tr-card h2{color:#fff;margin:10px 0 16px}.tr-card h2 i{color:#dcf3f4}
+.tr-copy>p{color:#cfc9c1;font-size:18px;line-height:1.6;margin:0 0 28px}
+.tr-btns{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.tr-btns .btn{background:var(--aqua);color:var(--ink)}.tr-btns .btn:hover{background:#fff}
+.tr-btns span{font-size:14px;color:#9fe3c3}.tr-btns span::before{content:"✓ "}
+.tr-steps{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.tr-steps li{display:flex;gap:18px;align-items:flex-start;padding:20px 22px;border-radius:20px;background:#ffffff0d;box-shadow:inset 0 0 0 1px #ffffff1a;transition:background .3s,transform .3s}
+.tr-steps li:hover{background:#ffffff17;transform:translateX(4px)}
+.tr-steps b{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#5bb58d;color:#1f1f1f;font-size:15px}
+.tr-steps li:nth-child(2) b{background:#dcf3f4}.tr-steps li:nth-child(3) b{background:#856b54;color:#fff}
+.tr-steps h3{color:#fff;font-size:19px;margin:2px 0 4px}.tr-steps p{color:#b8b2aa;margin:0;font-size:15px}
+@media(max-width:900px){.tr-card{grid-template-columns:1fr;gap:32px;padding:40px 26px;border-radius:26px}}
